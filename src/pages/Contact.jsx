@@ -3,7 +3,7 @@ import PageWrapper from "../components/PageWrapper";
 export default function Contact() {
   return (
     <PageWrapper>
-        <div className="mt-4 flex flex-col space-y-8">
+        <div className="relative mt-4 flex flex-col space-y-8 w-full">
             <h1 className="text-3xl font-bold text-gray-800">Projects</h1>
             <div className="flex flex-col space-y-3 p-2 rounded-lg border border-gray-800">
                 <div className="text-gray-700">
