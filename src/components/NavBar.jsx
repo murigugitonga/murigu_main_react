@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
      const linkBase =
-    "px-4 py-2 rounded-none transition-all duration-300 text-gray-700";
+    "px-4 py-2 rounded-none transition-all duration-400 ease-in-out text-gray-700";
     const active =
     "border-b border-blue-700 text-blue-700 font-semibold";
     return (
@@ -33,7 +33,7 @@ export default function NavBar() {
                 `${linkBase} ${isActive ? active : ""}`
                 }
             >
-                Contact
+                Projects
             </NavLink>
         </nav>
     )
