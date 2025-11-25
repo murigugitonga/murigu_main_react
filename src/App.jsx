@@ -1,21 +1,41 @@
-import { useState } from 'react'
-import Header from './components/header'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
-//import './App.css'
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
-function App() {
+import Navbar from "./components/NavBar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import PersonalDetail from "./components/Image";
+import Header from "./components/header";
+
+
+export default function App() {
+  const location = useLocation();
+
   return (
-    <nav className='bg-black/80'>
-      <Header/>
-      <div className="h-16 w-full items-center text-3xl text-white flex justify-between">
-        <h1>Murigu Gitonga</h1>
+    <div className="bg-[#f5f5f5] min-h-screen flex">
+      <div className="flex flex-col">
+        <Header/>
+        <div className="flex flex-col space-y-12 md:flex-row md:container md:mx-auto">
+          <PersonalDetail/>
+          <div className="flex flex-col md:w-2/3 ">
+              <Navbar/>
+              <AnimatePresence mode="wait">
+                <Routes location={location} key={location.pathname}>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                </Routes>
+              </AnimatePresence>
+          </div>
+        </div>
+        
       </div>
-      <div> 
-      </div>
-    </nav>
-    
-  )
+     
+    </div>
+  );
 }
 
-export default App
+
+
+
