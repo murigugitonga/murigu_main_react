@@ -14,11 +14,11 @@ export default function App() {
 
   return (
     <div className="bg-[#f5f5f5] min-h-screen flex">
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-start w-full relative">
         <Header/>
-        <div className="flex flex-col space-y-12 md:flex-row md:container md:mx-auto">
+        <div className="relative mt-28 z-10 flex flex-col md:space-x-5 md:flex-row md:container md:mx-auto">
           <PersonalDetail/>
-          <div className="flex flex-col md:w-2/3 ">
+          <div className="flex flex-col space-y-10 md:w-2/3 ">
               <Navbar/>
               <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>

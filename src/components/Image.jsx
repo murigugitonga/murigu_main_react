@@ -2,7 +2,7 @@ export default function PersonalDetail() {
     return (
         <div className="flex flex-col w-full space-y-4 md:space-y-0 md:w-1/3">
             <div className="flex w-full items-center justify-center">
-                <img src="src/assets/images/murigugitonga.jpg" className="w-3/4 h-auto rounded-full ring-4 ring-offset-2 ring-blue-600 lg:w-1/3  aspect-auto" alt="Murigu" />
+                <img src="./src/assets/images/murigugitonga.jpg" className="w-3/4 h-auto rounded-full ring-4 ring-offset-2 ring-blue-600 lg:w-1/2 object-contain aspect-auto" alt="Murigu" />
             </div>
             <div className="flex flex-col space-y-4 w-full items-center md:items-start">
                 <div className="flex flex-col space-y-1 items-center md:items-start">

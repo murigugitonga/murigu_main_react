@@ -10,8 +10,8 @@ export default function Contact() {
                     <p>My Projects are hosted on github</p>
                     <p>Feel free to visit and checkout some of my repositories</p>
                 </div>
-                <a href="#" className="flex border rounded-lg border-black items-center justify-center space-x-3 py-2.5">
-                    <img src="src/assets/images/github.png" className="w-6 h-6" alt="" />
+                <a href="https://github.com/murigugitonga" target="_blank" className="flex border rounded-lg border-black items-center justify-center space-x-3 py-2.5">
+                    <img src="./src/assets/images/github.png" className="w-6 h-6" alt="" />
                     <span className="font-medium text-lg text-gray-700"> Github</span>
                 </a>
             </div>

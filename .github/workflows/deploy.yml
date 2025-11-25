@@ -52,8 +52,6 @@ jobs:
             #     publish_branch: main
             #     target_repo : murigugitonga/murigugitonga.github.io
             #     keep_files: false # clear old build files before pushing
-deploy:
-    needs: build
-    
+
 
     
