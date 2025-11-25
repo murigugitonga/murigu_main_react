@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <div className="text-green-500 text-3xl">Header main</div>
+        <div className="text-green-500 text-3xl">Welcome to my Portfolio Website</div>
     )
 }
 
