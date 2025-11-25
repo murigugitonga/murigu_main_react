@@ -12,7 +12,11 @@ function App() {
       <div className="h-16 w-full items-center text-3xl text-white flex justify-between">
         <h1>Murigu Gitonga</h1>
       </div>
+      <div>
+        
+      </div>
     </nav>
+    
   )
 }
 
