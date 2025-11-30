@@ -5,9 +5,9 @@ export default function NavBar() {
      const linkBase =
     "px-4 pb-4 rounded-none transition-all duration-400 ease-in-out text-gray-700";
     const active =
-    "border-b border-blue-700 text-blue-700 font-semibold";
+    "border-b-4 border-blue-600 text-blue-600 font-semibold";
     return (
-        <nav className="flex gap-6 p-4 bg-inherit border-b border-gray-700/40">
+        <nav className="flex gap-8  p-4 bg-inherit">
             <NavLink
                 to="/"
                 end
