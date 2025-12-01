@@ -12,3 +12,11 @@ html, body {
 .marquee{
   animation: scroll 12s linear infinite;
 }
+
+.custom-bullet {
+  @apply w-6 h-2 rounded-full bg-white/40 mx-1 transition-all;
+}
+
+.swiper-pagination-bullet-active.custom-bullet {
+  @apply bg-white;
+}

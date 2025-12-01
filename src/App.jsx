@@ -15,10 +15,10 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="bg-[#f5f5f5]  flex">
-      <div className="flex flex-col items-center justify-start w-full relative">
+    <div className="bg-[#f5f5f5] flex">
+      <div className="flex flex-col space-y-12 items-center justify-start w-full relative">
         <Header/>
-        <div className="relative min-h-screen mt-28 z-10 flex flex-col md:space-x-5 md:flex-row md:container md:mx-auto">
+        <div className="relative min-h-screen mt-28 z-10 flex flex-col space-y-8 md:space-x-5 md:flex-row md:container md:mx-auto">
           <PersonalDetail/>
           <div className="flex flex-col -space-y-2 md:w-3/4">
               <Navbar/>
