@@ -9,7 +9,7 @@ export default function AiSect() {
             <SectionHeader sectHeading="Artificial Intelligence"/>
             {/**Section Header goes here */}
             <Feature 
-                title="Smart Systems"
+                title="Thinking machines"
                 image={defenceCard2}
                 decription="Advanced Systems continue to reshape the digital landscape"
             />

@@ -9,7 +9,7 @@ export default function SoftwareEng() {
             <SectionHeader sectHeading="Software Engineering"/>
             {/**Section Header goes here */}
             <Feature 
-                title="Smart Systems"
+                title="Robust digital ecosystems"
                 image={coverOne}
                 decription="Advanced Systems continue to reshape the digital landscape"
             />

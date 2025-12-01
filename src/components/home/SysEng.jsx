@@ -9,9 +9,9 @@ export default function SystemsEng() {
             <SectionHeader sectHeading="Systems Engineering"/>
             {/**Section Header goes here */}
             <Feature 
-                title="Smart Systems"
+                title="Gracefully scaling with complexity"
                 image={coverOne}
-                decription="Advanced Systems continue to reshape the digital landscape"
+                decription="As systems grow, complexity grows too and performance slows. The challenge thus becomes maintaing perfomance while growth happens"
             />
         </div>
     )
