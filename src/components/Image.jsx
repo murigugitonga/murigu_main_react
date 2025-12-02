@@ -21,7 +21,7 @@ export default function PersonalDetail() {
                     <span className="md:text-center">Systems Engineering</span> 
                     <span className="md:text-center">Software Development</span>
                 </div>
-                <div className="flex italic justify-center text-gray-400">
+                <div className="flex italic justify-center text-gray-400 px-4 md:px-0">
                     <p className="text-center">I specialize in building integrated systems that combine AI, automation, and robust software architecture.</p>
                 </div>
             </div>

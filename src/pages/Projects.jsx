@@ -8,7 +8,7 @@ export default function Contact() {
             <h1 className="text-2xl font-bold text-gray-800">Projects</h1>
             <div className="flex items-center justify-center md:justify-start">
                 <div className="flex flex-col space-y-3 p-2 rounded-lg border w-full max-w-72 border-gray-700/40">
-                    <div className="flex flex-col space-y-3 text-gray-700">
+                    <div className="flex flex-col space-y-3 text-gray-700/90">
                         <p>My software development projects are hosted on github</p>
                         <p>Feel free to visit and checkout my code repositories</p>
                     </div>

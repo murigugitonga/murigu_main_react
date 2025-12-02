@@ -14,7 +14,7 @@ export default function NavBar() {
       <NavLink
         replace
         to="/"
-        // end
+        end
         className={({ isActive }) =>
           `${linkBase} ${isActive ? active : "text-gray-700"}`
         }
@@ -22,8 +22,7 @@ export default function NavBar() {
         Home
       </NavLink>
 
-      <NavLink
-        replace
+      <NavLink 
         to="/about"
         className={({ isActive }) =>
           `${linkBase} ${isActive ? active : "text-gray-700"}`
@@ -33,7 +32,6 @@ export default function NavBar() {
       </NavLink>
 
       <NavLink
-        replace
         to="/projects"
         className={({ isActive }) =>
           `${linkBase} ${isActive ? active : "text-gray-700"}`
