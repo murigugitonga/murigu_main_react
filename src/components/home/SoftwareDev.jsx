@@ -6,11 +6,11 @@ import Feature from "./SectTemp"
 export default function SoftwareEng() {
     return(
         <div className="flex flex-col space-y-4">
-            <SectionHeader sectHeading="Software Engineering"/>
+            <SectionHeader sectHeading="Software Development"/>
             {/**Section Header goes here */}
             <Feature 
                 title="Robust digital ecosystems"
-                image={coverOne}
+                image={defenseCard}
                 decription="Advanced Systems continue to reshape the digital landscape"
             />
         </div>
