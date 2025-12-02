@@ -1,5 +1,5 @@
 import selfimage from "./murigugitonga.jpg"
-import logoimage from "./murigugreen.png"
+import logoimage from "./muriguGreen.png"
 import murigu from "./murigu.webp"
 import defenceCard2 from "./DefenceCard2.png"
 import defenseCard from "./hero2Defence.png"
