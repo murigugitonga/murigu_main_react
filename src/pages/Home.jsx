@@ -13,11 +13,11 @@ export default function Home() {
             <div className="flex flex-col space-y-4">
                 <AiSect/>
             </div>
-            <hr className="font-thin text-blue-600 mx-6"/>
+            <hr className="font-thin text-gray-400 mx-6"/>
             <div className="flex flex-col space-y-4">
                 <SystemsEng/>
             </div>
-            <hr className="font-thin text-green-600 mx-6"/>
+            <hr className="font-thin text-gray-400 mx-6"/>
             <div className="flex flex-col space-y-4">
               <SoftwareEng/>
             </div>
