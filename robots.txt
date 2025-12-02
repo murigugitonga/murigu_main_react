@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://murigugitonga.github.io/sitemap.xml
