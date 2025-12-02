@@ -31,7 +31,7 @@ export default function NavBar() {
       </NavLink>
 
       <NavLink
-        to="/contact"
+        to="/projects"
         className={({ isActive }) =>
           `${linkBase} ${isActive ? active : "text-gray-700"}`
         }
