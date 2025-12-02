@@ -28,11 +28,18 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      # verify token exists
+      - name: Debug token length
+        run: |
+          echo "TOKEN LENGTH: ${#SECRET_TOKEN}"
+        env:
+          SECRET_TOKEN: ${{ secrets.REPO_DEPLOY_SECRET }}
+
       # Deploy to separate repo
       - name: Deploy to GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.MURIGU_MAIN_SECRET }}
+          personal_token: ${{ secrets.REPO_DEPLOY_SECRET }}
           external_repository: murigugitonga/murigugitonga.github.io
           publish_branch: main
           publish_dir: ./dist
