@@ -12,7 +12,7 @@ export default function PersonalDetail() {
             <div className="flex flex-col space-y-4 w-full items-center">
                 <div className="flex flex-col space-y-1 items-center md:items-start">
                     <h2 className="text-xl font-semibold">Murigu Gitonga</h2>
-                    <h3 className="text-lg font-medium text-gray-600">Computer scientist</h3>
+                    <h3 className="text-sm font-medium text-gray-600">Computer scientist</h3>
                 </div>
                 <div className="flex w-full space-x-3 justify-center md:justify-between text-xs text-gray-500">
                     {/* <SkillMarquee/> */}
