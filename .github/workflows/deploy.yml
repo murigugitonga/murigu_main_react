@@ -32,7 +32,7 @@ jobs:
       - name: Deploy to GitHub Pages Repo
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.DIST_DEPLOY_SECRET }}
+          personal_token: ${{secrets.DIST_DEPLOY_SECRET}}
           external_repository: murigugitonga/murigugitonga.github.io
           publish_branch: main
           publish_dir: ./dist
