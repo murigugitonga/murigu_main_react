@@ -11,7 +11,10 @@ export default function AiSect() {
             <Feature 
                 title="Thinking machines"
                 image={AIFull}
-                decription="Advanced Systems continue to reshape the digital landscape"
+                reverse = {true}
+                decription="AI systems extend our ability to analyze patterns, automate decisions and model complex environments.
+                At their core, they transform data into structured intelligence that can greatly enhance human reasoning.
+                Understanding how these systems learn and where they fail is essential for building reliable artificial intelligence."
             />
         </div>
     )

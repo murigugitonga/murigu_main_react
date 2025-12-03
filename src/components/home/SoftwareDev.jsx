@@ -10,8 +10,11 @@ export default function SoftwareEng() {
             {/**Section Header goes here */}
             <Feature 
                 title="Robust digital ecosystems"
+                reverse={true}
                 image={softEng}
-                decription="Advanced Systems continue to reshape the digital landscape"
+                decription="Good code serves systems, users, and long term goals. Well-crafted software is not only functional,
+                but is also maintainable, scalable and build with intention. Good software systems are systems that efficiently address
+                specified problem domains while leaving room for emergent and unforeseen problems."
             />
         </div>
     )
