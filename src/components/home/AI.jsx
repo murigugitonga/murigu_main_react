@@ -1,4 +1,4 @@
-import {defenceCard2, defenseCard, coverOne } from "../../assets/images"
+import {AITransp, AIFull } from "../../assets/images"
 import SectionHeader from "../SectHeader"
 import Feature from "./SectTemp"
 
@@ -10,7 +10,7 @@ export default function AiSect() {
             {/**Section Header goes here */}
             <Feature 
                 title="Thinking machines"
-                image={defenceCard2}
+                image={AIFull}
                 decription="Advanced Systems continue to reshape the digital landscape"
             />
         </div>
