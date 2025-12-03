@@ -4,13 +4,13 @@ export default function Footer(){
         <>
         <div className="flex flex-col space-y-5 w-full items-center justify-center md:max-w-96 bg-inherit">
          <nav className="flex w-full space-x-14 justify-center">
-            <a href="facebook.com" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100073308548686" target="_blank">
                 <FaFacebook className="w-6 h-6 text-gray-700 hover:text-blue-600 transition"/>
             </a>
-            <a href="facebook.com" target="_blank">
+            <a href="https://www.linkedin.com/in/charles-gitonga-915bab360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
                 <FaLinkedin className="w-6 h-6 text-gray-700 hover:text-blue-600 transition"/>
             </a>
-            <a href="facebook.com" target="_blank">
+            <a href="https://x.com/Imurigugitonga?t=i-3-KYfZ_dKrTgHLqH3jig&s=08" target="_blank">
                 <FaXTwitter className="w-6 h-6 text-gray-700 hover:text-blue-600 transition"/>
             </a>
          </nav>

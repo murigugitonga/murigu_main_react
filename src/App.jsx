@@ -20,7 +20,7 @@ export default function App() {
         <Header/>
         <div className="relative min-h-screen mt-28 z-10 flex flex-col space-y-8 md:space-x-5 md:flex-row md:container md:mx-auto">
           <PersonalDetail/>
-          <div className="flex flex-col -space-y-2 md:w-3/4">
+          <div className="flex flex-col -space-y-2 xl:max-w-2xl md:w-3/4">
               <Navbar/>
               <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
