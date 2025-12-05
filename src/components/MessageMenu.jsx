@@ -36,8 +36,8 @@ export default function MessageMenu() {
 
       {/* Dropdown with slide-down + blur */}
       <div
-        className={`absolute right-0 mt-2 w-56 rounded-xl border border-white/20 py-2 z-50
-          bg-white/50 backdrop-blur-md shadow-xl
+        className={`absolute right-0 mt-4 w-56 rounded-xl border border-white/20 py-2 z-50
+          bg-white/90 backdrop-blur-md shadow-xl
           transform origin-top-right transition-all duration-300 ease-out
           ${
             open

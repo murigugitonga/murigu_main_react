@@ -1,12 +1,12 @@
 import { Routes, Route, useLocation, HashRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
+import Header from "./components/header";
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import PersonalDetail from "./components/Image";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 
