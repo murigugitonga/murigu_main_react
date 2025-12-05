@@ -8,9 +8,9 @@ export default function Contact() {
             <h1 className="text-2xl font-bold text-gray-800">Projects</h1>
             <div className="flex items-center justify-center md:justify-start">
                 <div className="flex flex-col space-y-3 p-2 rounded-lg border w-full max-w-72 border-gray-700/40">
-                    <div className="flex flex-col space-y-3 text-gray-700/90">
+                    <div className="flex flex-col space-y-3 text-sm text-gray-700/80">
                         <p>My software development projects are hosted on github</p>
-                        <p>Feel free to visit and checkout my code repositories</p>
+                        <p>Feel free to visit and check out my projects and sample code repositories</p>
                     </div>
                     <a href="https://github.com/murigugitonga" target="_blank" className="flex border rounded-lg border-black items-center justify-center space-x-3 py-2.5">
                         <img src={github} className="w-6 h-6" alt="github logo" />

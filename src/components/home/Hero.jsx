@@ -10,7 +10,7 @@ import {defenceCard2, defenseCard, coverOne } from "../../assets/images"
 
 export default function FadeCarousel() {
   return (
-    <div className="hidden md:block relative max-w-72 overflow-x-auto rounded-2xl">
+    <div className="relative hidden overflow-x-auto md:block max-w-72 rounded-2xl">
       <Swiper
         modules={[EffectFade, Pagination, Autoplay]}
         effect="fade"
@@ -27,7 +27,7 @@ export default function FadeCarousel() {
           <SwiperSlide key={idx} className="flex! items-center! justify-center!">
             <img
               src={src}
-              className="w-full h-full object-cover block"
+              className="block object-cover w-full h-full"
               alt=""
             />
           </SwiperSlide>

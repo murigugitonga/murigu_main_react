@@ -9,8 +9,8 @@ export default function About() {
           <div className="w-full flex flex-col space-y-2">
               <h1 className="text-xl font-semibold text-gray-700">Who I'm I ?</h1>
               <p className="mt-2 text-gray-700/90 text-sm">
-                  I am a computer scientist, Systems Engineer and Software developer skilled in designing,
-                  developing and implementing complex systems across various domains. My place is at the
+                  I am a computer scientist, systems engineer and software developer skilled in designing,
+                  developing and implementing complex systems across various domains. My niche sits at the
                   intersection of software, Artificial Intelligence and systems engineering, delivering
                   solutions wherever technology meets real-world challenges.
               </p>

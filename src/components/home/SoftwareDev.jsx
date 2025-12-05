@@ -13,7 +13,7 @@ export default function SoftwareEng() {
                 reverse={true}
                 image={softEng}
                 decription="Good code serves systems, users, and long term goals. Well-crafted software is not only functional,
-                but is also maintainable, scalable and build with intention. Good software systems are systems that efficiently address
+                but is also maintainable, scalable and build with intent. Good software systems are systems that efficiently address
                 specified problem domains while leaving room for emergent and unforeseen problems."
             />
         </div>

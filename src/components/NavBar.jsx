@@ -10,7 +10,7 @@ export default function NavBar() {
 
   return (
     // nav has its own base border; reduce nav bottom padding so alignment looks flush
-    <nav className="flex gap-8 p-4 pb-0 bg-inherit border-b border-gray-200">
+    <nav className="flex gap-8 p-4 pb-0 border-b border-gray-200 bg-inherit">
       <NavLink
         replace
         to="/"
