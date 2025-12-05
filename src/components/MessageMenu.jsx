@@ -7,7 +7,7 @@ export default function MessageMenu() {
 
   // Obfuscated contact details
   const emailUser = "gitongacharlie01";
-  const emailDomain = "example.com";
+  const emailDomain = "gmail.com";
 
   const whatsappBase = "254792684339".slice(0, 5);
   const whatsappEnd = "254792684339".slice(5);
