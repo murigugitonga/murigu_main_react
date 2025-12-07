@@ -1,6 +1,24 @@
+// File: api/pinned.js
 export default async function handler(req, res) {
+  // --- CORS headers ---
+  // For development allow localhost, in production allow your GitHub Pages domain
+  const allowedOrigins = [
+    "http://localhost:5173",               // local dev
+    "https://username.github.io"           // replace with your GitHub Pages URL
+  ];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+  res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  // Handle preflight OPTIONS requests
+  if (req.method === "OPTIONS") return res.status(200).end();
+
+  // --- GitHub GraphQL fetch ---
   const token = process.env.GITHUB_TOKEN;
-  const username = "murigugitonga"; 
+  const username = "murigugitonga";
 
   const query = `
     query {
@@ -36,9 +54,7 @@ export default async function handler(req, res) {
 
     const data = await githubResponse.json();
 
-    if (data.errors) {
-      return res.status(500).json({ error: data.errors });
-    }
+    if (data.errors) return res.status(500).json({ error: data.errors });
 
     const items = data.data.user.pinnedItems.nodes;
     res.status(200).json(items);

@@ -27,7 +27,7 @@ export default function About() {
           <hr className="font-thin text-gray-700/40 mx-6"/>
           <div className="w-full flex flex-col space-y-2">
             <h3 className="text-xl font-semibold text-gray-800">What do I do ?</h3>
-            <p className="text-gray-700/90 dark:text-gray-300/60 text-sm">
+            <p className="text-gray-700/90 text-sm">
               I architect and develop scalable software and systems, implement artificial Intelligence
               and data-driven models, inspire the next generation of intelligent systems and deliver
               integrated solutions tailored for problems plaguing domains spanning from defence and intelligence
