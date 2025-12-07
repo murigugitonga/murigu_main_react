@@ -1,76 +1,75 @@
 import { useEffect, useState } from "react";
 
+// Utility to convert date to "time ago" format
+function timeAgo(date) {
+const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+let interval = Math.floor(seconds / 31536000);
+if (interval > 1) return interval + " years ago";
+interval = Math.floor(seconds / 2592000);
+if (interval > 1) return interval + " months ago";
+interval = Math.floor(seconds / 86400);
+if (interval > 1) return interval + " days ago";
+interval = Math.floor(seconds / 3600);
+if (interval > 1) return interval + " hours ago";
+interval = Math.floor(seconds / 60);
+if (interval > 1) return interval + " minutes ago";
+return "just now";
+}
+
 export default function Projects() {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
+const [repos, setRepos] = useState([]);
+const [loading, setLoading] = useState(true);
 
-  // Vercel API endpoint
-  const VERCEL_API_URL = "https://murigu-main-react.vercel.app/api/pinned";
+const API_URL = "https://murigu-main-react.vercel.app/api/pinned";
 
-  useEffect(() => {
-    const fetchPinned = async () => {
-      try {
-        const res = await fetch(VERCEL_API_URL);
-        if (!res.ok) throw new Error("Failed to fetch API");
-        const data = await res.json();
-        setRepos(data);
-      } catch (err) {
-        console.error("Vercel API error:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPinned();
-  }, []);
+useEffect(() => {
+const fetchPinned = async () => {
+try {
+const res = await fetch(API_URL);
+if (!res.ok) throw new Error("Failed to fetch API");
+const data = await res.json();
+setRepos(data);
+} catch (err) {
+console.error("Vercel API error:", err);
+} finally {
+setLoading(false);
+}
+};
 
-  const skeletons = Array.from({ length: 6 });
+fetchPinned();
 
-  return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-4">
-      {loading
-        ? skeletons.map((_, idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow p-5 animate-pulse">
-              <div className="h-6 bg-gray-300  rounded w-3/4 mb-4"></div>
-              <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-full mb-2"></div>
-              <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-5/6 mb-4"></div>
-              <div className="flex items-center justify-between">
-                <div className="h-3 bg-gray-300 rounded w-1/4"></div>
-                <div className="h-3 bg-gray-300 rounded w-1/6"></div>
-                <div className="h-3 bg-gray-300 rounded w-1/6"></div>
-              </div>
-            </div>
-          ))
-        : repos.map((r) => (
-            <div
-              key={r.name}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow p-5 flex flex-col justify-between"
-            >
-              <a
-                href={r.url}
-                target="_blank"
-                rel="noreferrer"
-                className="font-semibold text-lg hover:underline"
-              >
-                {r.name}
-              </a>
-              {r.description && (
-                <p className="text-sm mt-2 text-gray-700 dark:text-gray-300">{r.description}</p>
-              )}
-              <div className="mt-4 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-                {r.primaryLanguage && (
-                  <span className="flex items-center gap-1">
-                    <span
-                      className="w-3 h-3 rounded-full"
-                      style={{ backgroundColor: r.primaryLanguage.color || "#000" }}
-                    ></span>
-                    {r.primaryLanguage.name}
-                  </span>
-                )}
-                <span>⭐ {r.stargazerCount}</span>
-                <span>🍴 {r.forkCount}</span>
-              </div>
-            </div>
-          ))}
-    </div>
-  );
+
+}, []);
+
+// Placeholder array for pulsating cards while loading
+const placeholders = Array.from({ length: 6 });
+
+return ( <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+{loading
+? placeholders.map((_, idx) => ( <div
+           key={idx}
+           className="bg-gray-200 p-5 rounded shadow animate-pulse h-32"
+         ></div>
+))
+: repos.map((r) => ( <div
+           key={r.name}
+           className="bg-white p-5 rounded shadow transition-shadow hover:shadow-lg"
+         > <a
+             href={r.url}
+             target="_blank"
+             rel="noreferrer"
+             className="font-bold text-lg hover:underline"
+           >
+{r.name} </a> <p className="text-sm mt-2 text-gray-700">{r.description}</p> <div className="mt-3 text-sm flex items-center gap-4">
+{r.primaryLanguage && ( <span className="flex items-center gap-1">
+<span
+className="w-3 h-3 rounded-full"
+style={{
+backgroundColor: r.primaryLanguage.color || "#000",
+}}
+></span>
+{r.primaryLanguage.name} </span>
+)} <span>🕒 {timeAgo(r.updatedAt)}</span> </div> </div>
+))} </div>
+);
 }
