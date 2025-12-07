@@ -3,8 +3,8 @@ export default async function handler(req, res) {
   // --- CORS headers ---
   // For development allow localhost, in production allow your GitHub Pages domain
   const allowedOrigins = [
-    "http://localhost:5173",               // local dev
-    "https://username.github.io"           // replace with your GitHub Pages URL
+    "http://localhost:5173",              
+    "https://murigugitonga.github.io"          
   ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
