@@ -1,10 +1,8 @@
-import fetch from "node-fetch";
-
 export default async function handler(req, res) {
   // --- CORS headers ---
   const allowedOrigins = [
     "https://murigugitonga.github.io",
-    "http://localhost:5173"
+    "http://localhost:5173",
   ];
 
   const origin = req.headers.origin;
@@ -15,7 +13,9 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
 
   const token = process.env.GITHUB_TOKEN;
   const username = "murigugitonga";
@@ -46,9 +46,9 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ query })
+      body: JSON.stringify({ query }),
     });
 
     const data = await githubResponse.json();
