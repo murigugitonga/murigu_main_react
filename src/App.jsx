@@ -15,8 +15,8 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="bg-[#f5f5f5] flex">
-      <div className="relative flex flex-col items-center justify-start w-full space-y-12">
+    <div data-arp-root className="bg-neutral-50 flex">
+      <div className="relative flex flex-col items-center justify-start w-full space-y-12 md:pb-3">
         <Header/>
         <div className="relative z-10 flex flex-col min-h-screen space-y-8 mt-28 md:space-x-5 md:flex-row md:mx-5 lg:gap-8 lg:container lg:mx-auto">
           <PersonalDetail/>

@@ -28,10 +28,13 @@ export default function MessageMenu() {
     <div className="relative" ref={menuRef}>
       {/* Icon Button */}
       <button
-        className="p-2 transition rounded-full hover:bg-gray-100"
+        className="p-2 transition rounded-full md:rounded-full focus:outline:none hover:bg-gray-100 md:hover:bg-blue-700 md:hover:shadow-md md:px-6 md:py-3 md:flex md:items-center md:space-x-2.5 md:justify-between md:bg-blue-600"
         onClick={() => setOpen((prev) => !prev)}
       >
-        <MessageSquare className="w-6 h-6 text-gray-700" />
+        <span className="sr-only ">Open message menu</span>
+        
+        <MessageSquare className="w-6 h-6 text-gray-700 text:white"/>
+        <span className="hidden md:block md:font-medium text:white">Message</span>
       </button>
 
       {/* Dropdown with slide-down + blur */}

@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <PageWrapper>
       <div className="relative flex flex-col w-full space-y-10">
-            <div className="flex flex-col h-32 bg-black">
-                <span className="text-3xl text-center text-white">Developing Advanced capabilties for advanced problems</span>
+            <div className="flex items-center justify-center flex-col h-48 bg-black">
+                <span className="text-3xl text-center text-white font-bold">Developing Advanced Capabilties for Advanced Problems</span>
                 {/* <Carousel/> */}
             </div>
             {/**AI section */}
