@@ -55,7 +55,7 @@ export default function Projects() {
 
   if (loading) {
     return (
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+      <div className="grid md:grid-cols-2 gap-6 p-4">
         {Array.from({ length: 6 }).map((_, i) => (
           <Skeleton key={i} />
         ))}
@@ -74,14 +74,14 @@ export default function Projects() {
             href={r.url}
             target="_blank"
             rel="noreferrer"
-            className="font-bold text-blue-500 hover:text-blue-600 underline text-lg hover:underline"
+            className="font-semibold text-blue-500 hover:text-blue-600 underline text-lg"
           >
             {r.name}
           </a>
 
-          <p className="text-sm mt-2 text-gray-700">{r.description}</p>
+          <p className="text-sm mt-2 text-gray-600">{r.description}</p>
 
-          <div className="mt-3 text-sm flex items-center justify-between gap-4">
+          <div className="mt-3 w-full text-sm flex items-center justify-between gap-4">
             {r.primaryLanguage && (
               <span className="flex items-center gap-1">
                 <span

@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://murigugitonga.github.io/</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-01-12T20:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://murigugitonga.github.io/about</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-01-12T20:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://murigugitonga.github.io/projects</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-01-12T20:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
