@@ -74,14 +74,14 @@ export default function Projects() {
             href={r.url}
             target="_blank"
             rel="noreferrer"
-            className="font-bold text-blue-500 hover:text-gray-600 underline text-lg hover:underline"
+            className="font-bold text-blue-500 hover:text-blue-600 underline text-lg hover:underline"
           >
             {r.name}
           </a>
 
           <p className="text-sm mt-2 text-gray-700">{r.description}</p>
 
-          <div className="mt-3 text-sm flex items-center gap-4">
+          <div className="mt-3 text-sm flex items-center justify-between gap-4">
             {r.primaryLanguage && (
               <span className="flex items-center gap-1">
                 <span
@@ -92,7 +92,11 @@ export default function Projects() {
               </span>
             )}
             {/** relative time since project was last uploaded */}
-            <span className="text-gray-600 w-5 h-5"> <Clock/> {timeAgo(r.updatedAt)}</span>
+            <p className="flex items-center w-full whitespace-nowrap space-x-3">
+              <Clock className="w-4 h-4"/>
+              <span className="text-gray-500 text-sm whitespace-nowrap">{timeAgo(r.updatedAt)}</span>
+
+            </p>
           </div>
         </div>
       ))}
