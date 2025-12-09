@@ -33,8 +33,8 @@ export default function MessageMenu() {
       >
         <span className="sr-only ">Open message menu</span>
         
-        <MessageSquare className="w-6 h-6 text-gray-700 text:white"/>
-        <span className="hidden md:block md:font-medium text:white">Message</span>
+        <MessageSquare className="w-6 h-6 md:text-gray-200"/>
+        <span className="hidden md:block md:font-medium md:text-gray-200">Message</span>
       </button>
 
       {/* Dropdown with slide-down + blur */}

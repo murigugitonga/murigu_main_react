@@ -11,7 +11,7 @@ export default function Home() {
     <PageWrapper>
       <div className="relative flex flex-col w-full space-y-10">
             <div className="flex items-center justify-center flex-col h-48 bg-black">
-                <span className="text-3xl text-center text-white font-bold">Developing Advanced Capabilities for Advanced Problems</span>
+                <span className="text-3xl text-center text-gray-100 font-bold">Developing Next Generation Capabilities for Next Generation Problems</span>
                 {/* <Carousel/> */}
             </div>
              <hr className="mx-6 font-thin text-gray-700/40"/>

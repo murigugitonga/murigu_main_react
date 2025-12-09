@@ -1,6 +1,7 @@
+import { Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 
-// Utility to convert date to "time ago" format
+// this utility function converts dates and displayes projects update time in respect to the current time
 function timeAgo(date) {
   const seconds = Math.floor((new Date() - new Date(date)) / 1000);
   let interval = Math.floor(seconds / 31536000);
@@ -27,10 +28,10 @@ export default function Projects() {
       try {
         const res = await fetch(API_URL);
         if (!res.ok) throw new Error("Failed to fetch API");
-        const data = await res.json();
-        setRepos(data);
-      } catch (err) {
-        console.error("Vercel API error:", err);
+            const data = await res.json();
+            setRepos(data);
+        } catch (err) {
+        console.error("Projects API error:", err);
       } finally {
         setLoading(false);
       }
@@ -39,7 +40,7 @@ export default function Projects() {
     fetchPinned();
   }, []);
 
-  // 🔵 Skeleton Loader (6 placeholder cards)
+  // Skeleton loader
   const Skeleton = () => (
     <div className="bg-white p-5 rounded shadow animate-pulse">
       <div className="h-5 w-1/2 bg-gray-300 rounded mb-3"></div>
@@ -90,8 +91,8 @@ export default function Projects() {
                 {r.primaryLanguage.name}
               </span>
             )}
-
-            <span>🕒 {timeAgo(r.updatedAt)}</span>
+            {/** relative time since project was last uploaded */}
+            <span className="text-gray-600 w-5 h-5"> <Clock/> {timeAgo(r.updatedAt)}</span>
           </div>
         </div>
       ))}
