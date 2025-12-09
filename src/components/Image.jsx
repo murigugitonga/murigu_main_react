@@ -8,9 +8,9 @@ export default function PersonalDetail() {
             <div className="relative flex items-center justify-center w-full">
                 {/**pulse animation placeholder */}
                 {!loaded && (
-                    <div className="absolute inset-0 rounded-full bg-gray-300 animate-pulse"/>
+                    <div className="absolute inset-0 rounded-lg bg-gray-300 animate-pulse"/>
                 )}
-                <img src={murigu} loading="lazy" onLoad={()=>setLoaded(true)} className={`object-cover ${loaded ? "opacity-100":"opacity-0"} transition-opacity duration-500  w-4/5 h-full rounded-lg md:w-full ring-2 ring-offset-4 ring-blue-600 lg:w-1/2 aspect-auto`} alt="Murigu"/>
+                <img src={murigu} loading="lazy" onLoad={()=>setLoaded(true)} className={`object-cover ${loaded ? "opacity-100":"opacity-0"} transition-opacity duration-300  w-4/5 h-full rounded-lg md:w-full ring-2 ring-offset-4 ring-blue-600 lg:w-1/2 aspect-auto`} alt="Murigu"/>
             </div>
             <div className="flex flex-col items-center w-full space-y-4">
                 <div className="flex flex-col items-center space-y-0">

@@ -64,7 +64,7 @@ export default function Projects() {
   }
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+    <div className="grid md:grid-cols-2 gap-6 p-4">
       {repos.map((r) => (
         <div
           key={r.name}
@@ -74,7 +74,7 @@ export default function Projects() {
             href={r.url}
             target="_blank"
             rel="noreferrer"
-            className="font-bold text-lg hover:underline"
+            className="font-bold text-blue-500 hover:text-gray-600 underline text-lg hover:underline"
           >
             {r.name}
           </a>
