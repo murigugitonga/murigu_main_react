@@ -25,8 +25,8 @@ export default function PersonalDetail() {
                     <span className="bg-gray-900/85 py-0.5 px-2 justify-self-center col-span-2 text-gray-300 whitespace-nowrap md:text-center">Software Development</span>
                 </div>
                 <div className="flex flex-col space-y-3 justify-center px-4 italic text-gray-500 md:px-0">
-                    <p className="text-sm text-center">Hello! I specialize in building integrated systems that combine artificial intelligence, modern engineering principles and robust software architecture.</p>
-                    <p className="text-sm text-center">If you are here, you are home already :)</p>
+                    <p className="text-sm text-center">I specialize in building integrated systems that combine artificial intelligence, modern engineering principles and robust software architecture.</p>
+                    <p className="text-sm text-center">If you are here, you are home already.</p>
                 </div>
             </div>
         </div>

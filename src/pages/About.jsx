@@ -11,7 +11,7 @@ export default function About() {
               <p className="mt-2 text-gray-700/90 text-sm">
                   I am a computer scientist, systems engineer and software developer skilled in designing,
                   developing and implementing complex systems across various domains. My niche sits at the
-                  intersection of software, Artificial Intelligence and systems engineering, delivering
+                  intersection of software, artificial intelligence and systems engineering, delivering
                   solutions wherever technology meets real-world challenges.
               </p>
           </div>
