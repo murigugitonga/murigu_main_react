@@ -64,7 +64,7 @@ export default function Projects() {
   }
 
   return (
-    <div className="grid md:grid-cols-2 gap-6 p-4">
+    <div className="grid md:grid-cols-2 gap-6 px-2 py-4">
       {repos.map((r) => (
         <div
           key={r.name}

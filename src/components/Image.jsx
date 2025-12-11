@@ -15,17 +15,18 @@ export default function PersonalDetail() {
             <div className="flex flex-col items-center w-full space-y-4">
                 <div className="flex flex-col items-center space-y-0">
                     <h2 className="text-xl font-medium">Murigu Gitonga</h2>
-                    <h3 className="text-[16px] text-gray-600 font-normal">Software Engineer</h3>
+                    <h3 className="text-[14px] text-gray-500 font-normal">Software Engineer</h3>
                 </div>
-                <div className="grid w-full grid-cols-2 gap-5 text-sm md:grid-cols-1 xl:grid-cols-2 place-items-center">
+                <div className="grid w-full grid-cols-2 gap-5 text-sm md:grid-cols-1 lg:grid-cols-2 place-items-center">
                     {/* <SkillMarquee/> */}
                     {/* <Skillset/> */}
                     <span className="bg-gray-900/85 py-0.5 px-2 text-gray-300 md:text-center whitespace-nowrap">Artificial Intelligence</span> 
                     <span className="bg-gray-900/85 py-0.5 px-2 text-gray-300 md:text-center whitespace-nowrap">Systems Engineering</span> 
-                    <span className="bg-gray-900/85 py-0.5 px-2 justify-self-center col-span-2 text-gray-300 whitespace-nowrap md:text-center">Software Development</span>
+                    <span className="bg-gray-900/85 py-0.5 px-2 justify-self-center md:justify-self-start lg:justify-self-center col-span-2 text-gray-300 whitespace-nowrap md:text-center">Software Development</span>
                 </div>
-                <div className="flex flex-col space-y-3 justify-center px-4 italic text-gray-500 md:px-0">
-                    <p className="text-sm text-center">I specialize in building integrated systems that combine artificial intelligence, modern engineering principles and robust software architecture.</p>
+                <div className="flex flex-col space-y-2.5 justify-center px-4 italic text-gray-500 md:px-0">
+                    <p className="text-sm text-center">I am a computer scientist and software & systems engineer conducting research and exploring projects across defense, intelligence, fintech and enterprise tech.</p>
+                    <p className="text-sm text-center">I am especially interested in systems that integrate artificial intelligence and other emerging technologies to enhance efficiency and capability.</p>
                     <p className="text-sm text-center">If you are here, you are home already.</p>
                 </div>
             </div>

@@ -19,19 +19,18 @@ export default function About() {
           <div className="w-full flex flex-col space-y-2">
             <h3 className="text-xl font-semibold text-gray-800">Why I'm I ?</h3>
             <p className="dark:text-gray-700/90 text-sm">
-              I am driven by the ever present challenge of transforming ideas into effective solutions.
-              I optimize software, design intelligent systems and solve operational problems that are
-              characteristic of modern systems.
+              I am a computer scientist because most of my research work directly borrows from computer science
+              fundamentals ( in concept and in application). I am a software engineer because I derive satisfaction from directly translating 
+              concepts into implementable ideas and I am a systems engineer because the latter can only succeed with systems engineering.
             </p>
           </div>
           <hr className="font-thin text-gray-700/40 mx-6"/>
           <div className="w-full flex flex-col space-y-2">
             <h3 className="text-xl font-semibold text-gray-800">What do I do ?</h3>
             <p className="text-gray-700/90 text-sm">
-              I architect and develop scalable software and systems, implement artificial Intelligence
-              and data-driven models, inspire the next generation of intelligent systems and deliver
-              integrated solutions tailored for problems plaguing domains spanning from defence and intelligence
-              to fintech and enterprise systems.
+              My work description is architecting and developing and implementing scalable software and (yes,and, not or) systems, leveraging artificial Intelligence
+              and other disruptive technologies (quantam and IoT), inspiring the next generation of intelligent systems and delivering
+              integrated solutions tailored to address problems specific to domains in question.
             </p>
           </div>
         </div>
