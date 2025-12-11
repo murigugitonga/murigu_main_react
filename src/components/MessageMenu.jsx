@@ -52,7 +52,7 @@ export default function MessageMenu() {
         {/* Email */}
         <a
           href={`mailto:${emailUser}@${emailDomain}`}
-          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-white/40"
+          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
           <Mail className="w-4 h-4 text-gray-800" />
           <span>{emailUser[0]}***@{emailDomain}</span>
@@ -63,7 +63,7 @@ export default function MessageMenu() {
           href={`https://wa.me/${whatsappBase}${whatsappEnd}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-white/40"
+          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
           <MessageCircle className="w-4 h-4 text-green-600" />
           <span>{whatsappBase}***{whatsappEnd.slice(-2)}</span>
@@ -74,7 +74,7 @@ export default function MessageMenu() {
           href={`https://t.me/${telegramUser}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-white/40"
+          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
           <Send className="w-4 h-4 text-blue-600" />
           <span>@{telegramUser.slice(0, 4)}***</span>
