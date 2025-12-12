@@ -94,7 +94,7 @@ export default function Projects() {
             {/** relative time since project was last uploaded */}
             <p className="flex items-center w-full whitespace-nowrap space-x-1">
               <Clock className="text-gray-500 w-4 h-4"/>
-              <span className="text-gray-400 text-[13px] whitespace-nowrap">{timeAgo(r.updatedAt)}</span>
+              <span className="text-gray-400 text-[12px] whitespace-nowrap">{timeAgo(r.updatedAt)}</span>
             </p>
           </div>
         </div>
