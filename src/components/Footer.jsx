@@ -1,5 +1,4 @@
-import {  } from "react-icons/fa"
-import { FaFacebook, FaXTwitter, FaLinkedin, FaMedium, FaMediumM } from "react-icons/fa6"
+import { FaFacebook, FaXTwitter, FaLinkedin, FaMedium } from "react-icons/fa6"
 export default function Footer(){
     return(
         <>
@@ -15,7 +14,7 @@ export default function Footer(){
                 <FaXTwitter className="w-6 h-6 text-gray-700 transition hover:text-blue-600"/>
             </a>
             <a href="https://medium.com/@Murigucharles" target="_blank">
-                <FaMediumM className="w-6 h-6 text-gray-700 transition hover:text-blue-600"/>
+                <FaMedium className="w-6 h-6 text-gray-700 transition hover:text-blue-600"/>
             </a>
          </nav>
          <div className="bg=[#faf9f6] items-center border-x border-t px-10 mx-12 md:max-w-96 border-gray-700/40 rounded-t-lg p-4 flex">
