@@ -8,7 +8,7 @@ export default function About() {
         <div className="flex flex-col space-y-8 w-full">
           <div className="w-full flex flex-col space-y-2">
               <h1 className="text-xl font-semibold text-gray-800/80 dark:text-gray-200">Who I'm I ?</h1>
-              <p className="mt-2 text-gray-500 dark:text-gray-300/70 text-sm">
+              <p className="mt-2 text-gray-500 dark:text-gray-300/70 text-sm leading-relaxed max-w-prose">
                   I am a computer scientist, systems engineer and software developer skilled in designing,
                   developing and implementing complex systems across various domains. My niche sits at the
                   intersection of software, artificial intelligence and systems engineering, delivering
@@ -18,7 +18,7 @@ export default function About() {
           <hr className="font-thin text-gray-700/40 dark:text-gray-500 mx-6"/>
           <div className="w-full flex flex-col space-y-2">
             <h3 className="text-xl font-semibold text-gray-800/80 dark:text-gray-200">Why I'm I ?</h3>
-            <p className="text-gray-500 dark:text-gray-300/70 text-sm">
+            <p className="text-gray-500 dark:text-gray-300/70 text-sm leading-relaxed max-w-prose">
               I am a computer scientist because most of my research work directly abstracts from computer science
               fundamentals (in concept and in application). I am a software engineer because I derive satisfaction from directly translating 
               concepts into implementable products and I am a systems engineer because the latter can only effectively succeed with the application of systems engineering.
@@ -27,7 +27,7 @@ export default function About() {
           <hr className="font-thin text-gray-700/40 dark:text-gray-500 mx-6"/>
           <div className="w-full flex flex-col space-y-2">
             <h3 className="text-xl font-semibold text-gray-800/80 dark:text-gray-200">What do I do ?</h3>
-            <p className="text-gray-500 dark:text-gray-300/70 text-sm">
+            <p className="text-gray-500 dark:text-gray-300/70 text-sm leading-relaxed max-w-prose">
               My work description is designing, architecting and implementing scalable software and (yes,and, not or) systems, leveraging artificial Intelligence
               and other disruptive technologies (quantum & cloud computing and IoT), inspiring the next generation of intelligent systems and delivering
               integrated solutions tailored to address problems specific to domains specified above.

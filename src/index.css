@@ -18,8 +18,16 @@
   }
 }
 
-html, body {
-  transition: background-color 0.5s ease, color 0.5s ease;
+html,
+body,
+* {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    fill 200ms ease,
+    stroke 200ms ease,
+    box-shadow 200ms ease;
 }
 
 @keyframes scroll{
@@ -27,16 +35,6 @@ html, body {
   100% {transform: translateX(-50%);}
 }
 
-.marquee{
-  animation: scroll 12s linear infinite;
-}
 
-.custom-bullet {
-  @apply w-6 h-2 rounded-full bg-white/40 mx-1 transition-all;
-}
-
-.swiper-pagination-bullet-active.custom-bullet {
-  @apply bg-white;
-}
 
 

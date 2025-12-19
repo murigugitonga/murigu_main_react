@@ -6,7 +6,7 @@ export default function NavBar() {
 
   // active: explicit blue text + 4px thick underline + slight negative bottom margin
   // so the underline visually sits on the nav's border-b
-  const active = "text-blue-600 dark:text-blue-500 font-semibold border-b-2 border-blue-600 dark:border-blue-500 -mb-0.5";
+  const active = "text-blue-600 dark:text-blue-500 font-semibold border-b-2 border-blue-600 dark:border-blue-500 mb-0";
 
   return (
     // nav has its own base border; reduce nav bottom padding so alignment looks flush
