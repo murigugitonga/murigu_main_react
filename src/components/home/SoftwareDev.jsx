@@ -12,9 +12,9 @@ export default function SoftwareEng() {
                 title="Robust digital ecosystems"
                 reverse={true}
                 image={softEng}
-                decription="Good code serves systems, users, and long term goals. Well-crafted software is not only functional,
+                description="Good code serves systems, users, and long term goals. Well-crafted software is not only functional,
                 but is also maintainable, scalable and built with intent. Good software systems are systems that efficiently address
-                specified problem domains while leaving room for emergent and unforeseen problems."
+                specified problem domains while leaving room for addressing emergent and unforeseen problems."
             />
         </div>
     )

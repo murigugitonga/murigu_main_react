@@ -37,7 +37,7 @@ export default function NavBar() {
           `${linkBase} ${isActive ? active : "text-gray-700"}`
         }
       >
-        Projects
+        Works
       </NavLink>
     </nav>
   );

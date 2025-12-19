@@ -13,9 +13,6 @@ export default function Footer(){
             <a href="https://x.com/Imurigugitonga?t=i-3-KYfZ_dKrTgHLqH3jig&s=08" target="_blank">
                 <FaXTwitter className="w-6 h-6 text-gray-700 transition hover:text-blue-600"/>
             </a>
-            <a href="https://medium.com/@Murigucharles" target="_blank">
-                <FaMedium className="w-6 h-6 text-gray-700 transition hover:text-blue-600"/>
-            </a>
          </nav>
          <div className="bg=[#faf9f6] items-center border-x border-t px-10 mx-12 md:max-w-96 border-gray-700/40 rounded-t-lg p-4 flex">
             <div className="flex flex-col space-y-0.5 items-center text-gray-600 text-[10px]">

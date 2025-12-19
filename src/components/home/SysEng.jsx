@@ -11,7 +11,7 @@ export default function SystemsEng() {
             <Feature 
                 title="Gracefully scaling with complexity"
                 image={sysEngTransp}
-                decription="Complexity grows exponentially with system growth. Systems engineering introduces order through interconnected
+                description="Complexity grows exponentially with system growth. Systems engineering introduces order through interconnected
                 components, interfaces and requirements. Through structured design, clear boundaries and thoughtul integration,
                 systems can (and should) scale without introducing more complexity."
             />
