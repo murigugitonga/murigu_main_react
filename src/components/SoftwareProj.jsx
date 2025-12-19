@@ -1,104 +1,130 @@
-import { Clock } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import {
+  MessageSquare,
+  Mail,
+  MessageCircle,
+  Send,
+  ChevronRight,
+} from "lucide-react";
 
-// this utility function converts dates and displayes projects update time in respect to the current time
-function timeAgo(date) {
-  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
-  let interval = Math.floor(seconds / 31536000);
-  if (interval > 1) return interval + " years ago";
-  interval = Math.floor(seconds / 2592000);
-  if (interval > 1) return interval + " months ago";
-  interval = Math.floor(seconds / 86400);
-  if (interval > 1) return interval + " days ago";
-  interval = Math.floor(seconds / 3600);
-  if (interval > 1) return interval + " hours ago";
-  interval = Math.floor(seconds / 60);
-  if (interval > 1) return interval + " minutes ago";
-  return "just now";
-}
+export default function MessageMenu() {
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
 
-export default function Projects() {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // Obfuscated contact details
+  const emailUser = "gitongacharlie01";
+  const emailDomain = "gmail.com";
 
-  const API_URL = "https://murigu-main-react.vercel.app/api/pinned";
+  const whatsappBase = "254792684339".slice(0, 5);
+  const whatsappEnd = "254792684339".slice(5);
+
+  const telegramUser = "murigugitonga";
 
   useEffect(() => {
-    const fetchPinned = async () => {
-      try {
-        const res = await fetch(API_URL);
-        if (!res.ok) throw new Error("Failed to fetch API");
-            const data = await res.json();
-            setRepos(data);
-        } catch (err) {
-        console.error("Projects API error:", err);
-      } finally {
-        setLoading(false);
+    if (!open) return;
+
+    const isInsideMenu = (target) =>
+      menuRef.current && menuRef.current.contains(target);
+
+    const closeIfOutside = (e) => {
+      if (!isInsideMenu(e.target)) {
+        setOpen(false);
       }
     };
 
-    fetchPinned();
-  }, []);
+    const closeOnScrollOrKey = () => setOpen(false);
 
-  // Skeleton loader
-  const Skeleton = () => (
-    <div className="bg-white p-5 rounded shadow animate-pulse">
-      <div className="h-5 w-1/2 bg-gray-300 rounded mb-3"></div>
-      <div className="h-4 w-full bg-gray-200 rounded mb-2"></div>
-      <div className="h-4 w-5/6 bg-gray-200 rounded mb-4"></div>
-      <div className="flex items-center gap-4 mt-3">
-        <div className="h-3 w-20 bg-gray-200 rounded"></div>
-        <div className="h-3 w-24 bg-gray-200 rounded"></div>
-      </div>
-    </div>
-  );
+    // Outside interactions
+    document.addEventListener("mousedown", closeIfOutside);
+    document.addEventListener("pointerdown", closeIfOutside);
+    document.addEventListener("touchstart", closeIfOutside);
 
-  if (loading) {
-    return (
-      <div className="grid md:grid-cols-2 gap-6 p-4">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <Skeleton key={i} />
-        ))}
-      </div>
-    );
-  }
+    // Global interactions
+    window.addEventListener("scroll", closeOnScrollOrKey, { passive: true });
+    window.addEventListener("wheel", closeOnScrollOrKey, { passive: true });
+    window.addEventListener("keydown", closeOnScrollOrKey);
+
+    return () => {
+      document.removeEventListener("mousedown", closeIfOutside);
+      document.removeEventListener("pointerdown", closeIfOutside);
+      document.removeEventListener("touchstart", closeIfOutside);
+
+      window.removeEventListener("scroll", closeOnScrollOrKey);
+      window.removeEventListener("wheel", closeOnScrollOrKey);
+      window.removeEventListener("keydown", closeOnScrollOrKey);
+    };
+  }, [open]);
 
   return (
-    <div className="grid md:grid-cols-2 gap-6 px-2 py-4">
-      {repos.map((r) => (
-        <div
-          key={r.name}
-          className="bg-white p-5 rounded shadow hover:shadow-lg transition-shadow"
+    <div className="relative" ref={menuRef}>
+      {/* Icon Button */}
+      <button
+        className="p-2 transition rounded-full md:rounded-full focus:outline:none hover:bg-gray-100 md:hover:bg-blue-700 md:hover:shadow-md md:px-6 md:py-3 md:flex md:items-center md:space-x-2.5 md:justify-between md:bg-blue-600"
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        <span className="sr-only">Open message menu</span>
+
+        <MessageSquare className="w-6 h-6 md:text-gray-200" />
+        <span className="hidden md:block md:font-medium md:text-gray-200">
+          Message
+        </span>
+      </button>
+
+      {/* Dropdown */}
+      <div
+        className={`absolute right-0 mt-4 w-56 rounded-xl border border-white/20 py-2 z-50
+          bg-white/90 backdrop-blur-md shadow-xl
+          transform origin-top-right transition-all duration-300 ease-out
+          ${
+            open
+              ? "opacity-100 scale-100 translate-y-0"
+              : "opacity-0 scale-95 -translate-y-3 pointer-events-none"
+          }
+        `}
+      >
+        {/* Email */}
+        <a
+          href={`mailto:${emailUser}@${emailDomain}`}
+          onClick={() => setOpen(false)}
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
-          <a
-            href={r.url}
-            target="_blank"
-            rel="noreferrer"
-            className="font-semibold text-blue-500 hover:text-blue-600 underline text-lg"
-          >
-            {r.name}
-          </a>
-
-          <p className="text-sm mt-2 text-gray-500">{r.description}</p>
-
-          <div className="mt-3 w-full text-sm flex items-center justify-between gap-4">
-            {r.primaryLanguage && (
-              <span className="flex w-full whitespace-nowrap items-center gap-1">
-                <span
-                  className="w-3 h-3 rounded-full"
-                  style={{ backgroundColor: r.primaryLanguage.color || "#000" }}
-                ></span>
-                {r.primaryLanguage.name}
-              </span>
-            )}
-            {/** relative time since project was last uploaded */}
-            <p className="flex items-center w-full whitespace-nowrap space-x-1">
-              <Clock className="text-gray-500 w-4 h-4"/>
-              <span className="text-gray-400 text-[12px] whitespace-nowrap">{timeAgo(r.updatedAt)}</span>
-            </p>
+          <div className="flex items-center gap-3">
+            <Mail className="w-4 h-4 text-gray-800" />
+            <span>Gmail</span>
           </div>
-        </div>
-      ))}
+          <ChevronRight className="w-4 h-4 text-gray-400" />
+        </a>
+
+        {/* WhatsApp */}
+        <a
+          href={`https://wa.me/${whatsappBase}${whatsappEnd}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setOpen(false)}
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
+        >
+          <div className="flex items-center gap-3">
+            <MessageCircle className="w-4 h-4 text-green-600" />
+            <span>WhatsApp</span>
+          </div>
+          <ChevronRight className="w-4 h-4 text-gray-400" />
+        </a>
+
+        {/* Telegram */}
+        <a
+          href={`https://t.me/${telegramUser}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setOpen(false)}
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
+        >
+          <div className="flex items-center gap-3">
+            <Send className="w-4 h-4 text-blue-600" />
+            <span>Telegram</span>
+          </div>
+          <ChevronRight className="w-4 h-4 text-gray-400" />
+        </a>
+      </div>
     </div>
   );
 }
