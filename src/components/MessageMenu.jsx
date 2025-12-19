@@ -1,5 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageSquare, Mail, MessageCircle, Send } from "lucide-react";
+import {
+  MessageSquare,
+  Mail,
+  MessageCircle,
+  Send,
+  ChevronRight,
+} from "lucide-react";
 
 export default function MessageMenu() {
   const [open, setOpen] = useState(false);
@@ -15,14 +21,36 @@ export default function MessageMenu() {
   const telegramUser = "murigugitonga";
 
   useEffect(() => {
-    const handler = (e) => {
+    if (!open) return;
+
+    const closeMenuIfOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
         setOpen(false);
       }
     };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
+
+    const closeMenu = () => setOpen(false);
+
+    // Click / pointer outside
+    document.addEventListener("mousedown", closeMenuIfOutside);
+    document.addEventListener("pointerdown", closeMenuIfOutside);
+
+    // Any interaction closes menu
+    window.addEventListener("scroll", closeMenu, { passive: true });
+    window.addEventListener("wheel", closeMenu, { passive: true });
+    window.addEventListener("touchstart", closeMenu, { passive: true });
+    window.addEventListener("keydown", closeMenu);
+
+    return () => {
+      document.removeEventListener("mousedown", closeMenuIfOutside);
+      document.removeEventListener("pointerdown", closeMenuIfOutside);
+
+      window.removeEventListener("scroll", closeMenu);
+      window.removeEventListener("wheel", closeMenu);
+      window.removeEventListener("touchstart", closeMenu);
+      window.removeEventListener("keydown", closeMenu);
+    };
+  }, [open]);
 
   return (
     <div className="relative" ref={menuRef}>
@@ -31,13 +59,15 @@ export default function MessageMenu() {
         className="p-2 transition rounded-full md:rounded-full focus:outline:none hover:bg-gray-100 md:hover:bg-blue-700 md:hover:shadow-md md:px-6 md:py-3 md:flex md:items-center md:space-x-2.5 md:justify-between md:bg-blue-600"
         onClick={() => setOpen((prev) => !prev)}
       >
-        <span className="sr-only ">Open message menu</span>
-        
-        <MessageSquare className="w-6 h-6 md:text-gray-200"/>
-        <span className="hidden md:block md:font-medium md:text-gray-200">Message</span>
+        <span className="sr-only">Open message menu</span>
+
+        <MessageSquare className="w-6 h-6 md:text-gray-200" />
+        <span className="hidden md:block md:font-medium md:text-gray-200">
+          Message
+        </span>
       </button>
 
-      {/* Dropdown with slide-down + blur */}
+      {/* Dropdown */}
       <div
         className={`absolute right-0 mt-4 w-56 rounded-xl border border-white/20 py-2 z-50
           bg-white/90 backdrop-blur-md shadow-xl
@@ -52,10 +82,13 @@ export default function MessageMenu() {
         {/* Email */}
         <a
           href={`mailto:${emailUser}@${emailDomain}`}
-          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-blue-500/40"
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
-          <Mail className="w-4 h-4 text-gray-800" />
-          <span>{emailUser[0]}***@{emailDomain}</span>
+          <div className="flex items-center gap-3">
+            <Mail className="w-4 h-4 text-gray-800" />
+            <span>Gmail</span>
+          </div>
+          <ChevronRight className="w-4 h-4 text-gray-400" />
         </a>
 
         {/* WhatsApp */}
@@ -63,10 +96,13 @@ export default function MessageMenu() {
           href={`https://wa.me/${whatsappBase}${whatsappEnd}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-blue-500/40"
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
-          <MessageCircle className="w-4 h-4 text-green-600" />
-          <span>{whatsappBase}***{whatsappEnd.slice(-2)}</span>
+          <div className="flex items-center gap-3">
+            <MessageCircle className="w-4 h-4 text-green-600" />
+            <span>WhatsApp</span>
+          </div>
+          <ChevronRight className="w-4 h-4 text-gray-400" />
         </a>
 
         {/* Telegram */}
@@ -74,10 +110,13 @@ export default function MessageMenu() {
           href={`https://t.me/${telegramUser}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 px-4 py-2 transition rounded-md hover:bg-blue-500/40"
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
-          <Send className="w-4 h-4 text-blue-600" />
-          <span>@{telegramUser.slice(0, 4)}***</span>
+          <div className="flex items-center gap-3">
+            <Send className="w-4 h-4 text-blue-600" />
+            <span>Telegram</span>
+          </div>
+          <ChevronRight className="w-4 h-4 text-gray-400" />
         </a>
       </div>
     </div>

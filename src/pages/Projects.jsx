@@ -23,7 +23,7 @@ export default function Contact() {
             </div>
             {/** featured talks */}
             <div className="flex flex-col space-y-2">
-              <h3 className="text-xl font-medium text-gray-700">Featured talks</h3>
+              <h3 className="text-xl font-medium text-gray-800/80">Featured talks</h3>
               <div className="block">
                   <span className="text-sm text-gray-400">Coming soon...</span>
               </div>

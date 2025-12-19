@@ -79,7 +79,7 @@ export default function Projects() {
             {r.name}
           </a>
 
-          <p className="text-sm mt-2 text-gray-600">{r.description}</p>
+          <p className="text-sm mt-2 text-gray-500">{r.description}</p>
 
           <div className="mt-3 w-full text-sm flex items-center justify-between gap-4">
             {r.primaryLanguage && (
