@@ -72,8 +72,8 @@ export default function MessageMenu() {
 
       {/* Dropdown */}
       <div
-        className={`absolute right-0 mt-4 w-56 rounded-xl border border-white/20 py-2 z-50
-          bg-white/90 backdrop-blur-md shadow-xl
+        className={`absolute dark:bg-[#1b1b1b] right-0 mt-4 w-56 rounded-xl border border-white/20 dark:border-white/60 py-2 z-50
+          bg-white/90 backdrop-blur-md flex flex-col space-y-4 shadow-xl
           transform origin-top-right transition-all duration-300 ease-out
           ${
             open
@@ -86,13 +86,13 @@ export default function MessageMenu() {
         <a
           href={`mailto:${emailUser}@${emailDomain}`}
           onClick={() => setOpen(false)}
-          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500 dark:text-gray-300/70"
         >
           <div className="flex items-center gap-3">
-            <Mail className="w-4 h-4 text-gray-800" />
+            <Mail className="w-4 h-4 text-gray-800 dark:text-gray-200" />
             <span>Gmail</span>
           </div>
-          <ChevronRight className="w-4 h-4 text-gray-400" />
+          <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-300/70" />
         </a>
 
         {/* WhatsApp */}
@@ -101,13 +101,13 @@ export default function MessageMenu() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setOpen(false)}
-          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40 dark:text-gray-300/70"
         >
           <div className="flex items-center gap-3">
-            <MessageCircle className="w-4 h-4 text-green-600" />
+            <MessageCircle className="w-4 h-4 text-green-600 dark:text-green-200" />
             <span>WhatsApp</span>
           </div>
-          <ChevronRight className="w-4 h-4 text-gray-400" />
+          <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-300/70" />
         </a>
 
         {/* Telegram */}
@@ -116,13 +116,13 @@ export default function MessageMenu() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setOpen(false)}
-          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
+          className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40 dark:text-gray-300/70"
         >
           <div className="flex items-center gap-3">
-            <Send className="w-4 h-4 text-blue-600" />
+            <Send className="w-4 h-4 text-blue-600 dark:text-blue-200" />
             <span>Telegram</span>
           </div>
-          <ChevronRight className="w-4 h-4 text-gray-400" />
+          <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-300/70" />
         </a>
       </div>
     </div>

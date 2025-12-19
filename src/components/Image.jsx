@@ -15,7 +15,7 @@ export default function PersonalDetail() {
             <div className="flex flex-col items-center w-full space-y-4">
                 <div className="flex flex-col items-center space-y-0">
                     <h2 className="text-xl font-medium">Murigu Gitonga</h2>
-                    <h3 className="text-[14px] text-gray-500 dark:text-gray-300 font-normal">Software Engineer</h3>
+                    <h3 className="text-[14px] text-gray-500 dark:text-gray-300/70 font-normal">Software Engineer</h3>
                 </div>
                 <div className="grid w-full grid-cols-2 gap-5 text-sm md:grid-cols-1 lg:grid-cols-2 place-items-center">
                     {/* <SkillMarquee/> */}
@@ -24,7 +24,7 @@ export default function PersonalDetail() {
                     <span className="bg-gray-900/85 py-0.5 px-2 text-gray-300 md:text-center whitespace-nowrap">Systems Engineering</span> 
                     <span className="bg-gray-900/85 py-0.5 px-2 justify-self-center md:justify-self-start lg:justify-self-center col-span-2 text-gray-300 whitespace-nowrap md:text-center">Software Development</span>
                 </div>
-                <div className="flex flex-col space-y-2.5 justify-center px-4 italic text-gray-500 dark:text-gray-200 md:px-0">
+                <div className="flex flex-col space-y-2.5 justify-center px-4 italic text-gray-500 dark:text-gray-300/80 md:px-0">
                     <p className="text-[13px] text-center">I am a computer scientist and a software & systems engineer conducting research and exploring projects across defence, intelligence, fintech and enterprise domains.</p>
                     <p className="text-[13px] text-center">I am especially interested in systems that integrate artificial intelligence and other emerging technologies to enhance efficiency and capability.</p>
                     <p className="text-[13px] text-center">If you are here, you are home already.</p>

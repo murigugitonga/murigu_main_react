@@ -14,7 +14,7 @@ export default function Footer(){
                 <FaXTwitter className="w-6 h-6 text-gray-700 dark:text-gray-200 transition hover:text-blue-600"/>
             </a>
          </nav>
-         <div className="bg=[#faf9f6] items-center border-x border-t px-10 mx-12 md:max-w-96 border-gray-700/40 dark:border-gray-400 rounded-t-lg p-4 flex">
+         <div className="bg=[#faf9f6] items-center border-x border-t px-10 mx-12 md:max-w-96 border-gray-700/40 dark:border-gray-500 rounded-t-lg p-4 flex">
             <div className="flex flex-col space-y-0.5 items-center text-gray-600 dark:text-gray-300 text-[10px]">
                 <h3>Murigu Gitonga &copy; { new Date().getFullYear()}.</h3>
                 <p>All Rights Reserved.</p>

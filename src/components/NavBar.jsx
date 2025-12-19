@@ -6,17 +6,17 @@ export default function NavBar() {
 
   // active: explicit blue text + 4px thick underline + slight negative bottom margin
   // so the underline visually sits on the nav's border-b
-  const active = "text-blue-600 font-semibold border-b-2 border-blue-600 mb-0";
+  const active = "text-blue-600 dark:text-blue-500 font-semibold border-b-2 border-blue-600 dark:border-blue-500 -mb-0.5";
 
   return (
     // nav has its own base border; reduce nav bottom padding so alignment looks flush
-    <nav className="flex gap-8 p-4 pb-0 border-b border-gray-200 bg-inherit">
+    <nav className="flex gap-8 p-4 pb-0 border-b border-gray-200 dark:border-gray-500 bg-inherit">
       <NavLink
         replace
         to="/"
         end
         className={({ isActive }) =>
-          `${linkBase} ${isActive ? active : "text-gray-700"}`
+          `${linkBase} ${isActive ? active : "text-gray-700 dark:text-gray-400"}`
         }
       >
         Home
@@ -24,8 +24,9 @@ export default function NavBar() {
 
       <NavLink 
         to="/about"
+        end
         className={({ isActive }) =>
-          `${linkBase} ${isActive ? active : "text-gray-700"}`
+          `${linkBase} ${isActive ? active : "text-gray-700 dark:text-gray-400"}`
         }
       >
         About
@@ -33,8 +34,9 @@ export default function NavBar() {
 
       <NavLink
         to="/projects"
+        end
         className={({ isActive }) =>
-          `${linkBase} ${isActive ? active : "text-gray-700"}`
+          `${linkBase} ${isActive ? active : "text-gray-700 dark:text-gray-400"}`
         }
       >
         Works

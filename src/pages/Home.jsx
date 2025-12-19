@@ -14,16 +14,16 @@ export default function Home() {
                 <span className="text-3xl text-center text-gray-100 font-bold">Developing Next Generation Capabilities for Next Generation Problems</span>
                 {/* <Carousel/> */}
             </div>
-             <hr className="mx-6 font-thin text-gray-700/40"/>
+             <hr className="mx-6 font-thin text-gray-700/40 dark:text-gray-500"/>
             {/**AI section */}
             <div className="flex flex-col space-y-4">
                 <AiSect/>
             </div>
-            <hr className="mx-6 font-thin text-gray-700/40"/>
+            <hr className="mx-6 font-thin text-gray-700/40 dark:text-gray-500"/>
             <div className="flex flex-col space-y-4">
                 <SystemsEng/>
             </div>
-            <hr className="mx-6 font-thin text-gray-700/40"/>
+            <hr className="mx-6 font-thin text-gray-700/40 dark:text-gray-500"/>
             <div className="flex flex-col space-y-4">
               <SoftwareEng/>
             </div>

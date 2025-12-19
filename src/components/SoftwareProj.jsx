@@ -68,7 +68,7 @@ export default function Projects() {
       {repos.map((r) => (
         <div
           key={r.name}
-          className="bg-white p-5 rounded shadow hover:shadow-lg dark:bg[#1b1b1b] transition-shadow"
+          className="bg-white p-5 rounded-md shadow hover:shadow-lg dark:bg-[#1b1b1b] transition-shadow"
         >
           <a
             href={r.url}
@@ -79,7 +79,7 @@ export default function Projects() {
             {r.name}
           </a>
 
-          <p className="text-sm mt-2 text-gray-500">{r.description}</p>
+          <p className="text-sm mt-2 text-gray-500 dark:text-gray-300/70">{r.description}</p>
 
           <div className="mt-3 w-full text-sm flex items-center justify-between gap-4">
             {r.primaryLanguage && (
