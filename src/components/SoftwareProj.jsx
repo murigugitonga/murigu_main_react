@@ -68,7 +68,7 @@ export default function Projects() {
       {repos.map((r) => (
         <div
           key={r.name}
-          className="bg-white p-5 rounded shadow hover:shadow-lg transition-shadow"
+          className="bg-white p-5 rounded shadow hover:shadow-lg dark:bg[#1b1b1b] transition-shadow"
         >
           <a
             href={r.url}

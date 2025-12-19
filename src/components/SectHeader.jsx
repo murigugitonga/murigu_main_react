@@ -1,7 +1,7 @@
 export default function SectionHeader({ sectHeading}) {
     return(
         <div className="flex w-full items-center justify-center">
-            <h3 className="font-thin leading-3 text-[15px] nd:text-[19px] tracking-[8px] text-gray-500">{sectHeading}</h3>
+            <h3 className="font-thin leading-3 text-[15px] nd:text-[19px] tracking-[8px] text-gray-500 dark:text-white">{sectHeading}</h3>
         </div>
     )
 }
