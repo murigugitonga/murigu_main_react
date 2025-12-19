@@ -23,32 +23,35 @@ export default function MessageMenu() {
   useEffect(() => {
     if (!open) return;
 
-    const closeMenuIfOutside = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
+    const isInsideMenu = (target) =>
+      menuRef.current && menuRef.current.contains(target);
+
+    const closeIfOutside = (e) => {
+      if (!isInsideMenu(e.target)) {
         setOpen(false);
       }
     };
 
-    const closeMenu = () => setOpen(false);
+    const closeOnScrollOrKey = () => setOpen(false);
 
-    // Click / pointer outside
-    document.addEventListener("mousedown", closeMenuIfOutside);
-    document.addEventListener("pointerdown", closeMenuIfOutside);
+    // Outside interactions
+    document.addEventListener("mousedown", closeIfOutside);
+    document.addEventListener("pointerdown", closeIfOutside);
+    document.addEventListener("touchstart", closeIfOutside);
 
-    // Any interaction closes menu
-    window.addEventListener("scroll", closeMenu, { passive: true });
-    window.addEventListener("wheel", closeMenu, { passive: true });
-    window.addEventListener("touchstart", closeMenu, { passive: true });
-    window.addEventListener("keydown", closeMenu);
+    // Global interactions
+    window.addEventListener("scroll", closeOnScrollOrKey, { passive: true });
+    window.addEventListener("wheel", closeOnScrollOrKey, { passive: true });
+    window.addEventListener("keydown", closeOnScrollOrKey);
 
     return () => {
-      document.removeEventListener("mousedown", closeMenuIfOutside);
-      document.removeEventListener("pointerdown", closeMenuIfOutside);
+      document.removeEventListener("mousedown", closeIfOutside);
+      document.removeEventListener("pointerdown", closeIfOutside);
+      document.removeEventListener("touchstart", closeIfOutside);
 
-      window.removeEventListener("scroll", closeMenu);
-      window.removeEventListener("wheel", closeMenu);
-      window.removeEventListener("touchstart", closeMenu);
-      window.removeEventListener("keydown", closeMenu);
+      window.removeEventListener("scroll", closeOnScrollOrKey);
+      window.removeEventListener("wheel", closeOnScrollOrKey);
+      window.removeEventListener("keydown", closeOnScrollOrKey);
     };
   }, [open]);
 
@@ -82,6 +85,7 @@ export default function MessageMenu() {
         {/* Email */}
         <a
           href={`mailto:${emailUser}@${emailDomain}`}
+          onClick={() => setOpen(false)}
           className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
           <div className="flex items-center gap-3">
@@ -96,6 +100,7 @@ export default function MessageMenu() {
           href={`https://wa.me/${whatsappBase}${whatsappEnd}`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => setOpen(false)}
           className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
           <div className="flex items-center gap-3">
@@ -110,6 +115,7 @@ export default function MessageMenu() {
           href={`https://t.me/${telegramUser}`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => setOpen(false)}
           className="flex items-center justify-between px-4 py-2 transition rounded-md hover:bg-blue-500/40"
         >
           <div className="flex items-center gap-3">
