@@ -63,13 +63,11 @@ export default function MessageMenu() {
         onClick={() => setOpen((prev) => !prev)}
       >
         <span className="sr-only">Open message menu</span>
-
         <MessageSquare className="w-6 h-6 md:text-gray-200" />
         <span className="hidden md:block md:font-medium md:text-gray-200">
           Message
         </span>
       </button>
-
       {/* Dropdown */}
       <div
         className={`absolute dark:bg-[#1b1b1b] right-0 mt-4 w-56 rounded-xl border border-white/20 dark:border-white/60 py-2 z-50
@@ -94,7 +92,6 @@ export default function MessageMenu() {
           </div>
           <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-300/70" />
         </a>
-
         {/* WhatsApp */}
         <a
           href={`https://wa.me/${whatsappBase}${whatsappEnd}`}
@@ -109,7 +106,6 @@ export default function MessageMenu() {
           </div>
           <ChevronRight className="w-4 h-4 text-gray-400 dark:text-gray-300/70" />
         </a>
-
         {/* Telegram */}
         <a
           href={`https://t.me/${telegramUser}`}

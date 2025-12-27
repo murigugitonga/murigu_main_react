@@ -1,8 +1,6 @@
 import { logoimage } from "../assets/images"
-//import SubtleToggle from "./CoolToggle"
 import  MessageMenu  from "./MessageMenu"
 import ToggleMode from "./ToggleMode"
-//import ThemeToggle from "./ModeToggle"
 
 
 export default function Header() {
@@ -15,8 +13,7 @@ export default function Header() {
             <div className="flex items-center space-x-4">
                 <ToggleMode/>
                 <MessageMenu/>
-            </div>
-            
+            </div>  
         </header>
     )
 }

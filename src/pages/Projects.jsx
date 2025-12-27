@@ -14,18 +14,22 @@ export default function Contact() {
                 <h3 className="text-xl font-medium text-gray-800/80 dark:text-gray-200">Software</h3>
                 <Projects/>
             </div>
+            {/** Selected Blogs */}
+            {/* <div className="flex flex-col space-y-2">
+                <h3 className="text-xl font-medium text-gray-800/80 dark:text-gray-200">Selected Blogs</h3>
+            </div> */}
             {/** research papers */}
             <div className="flex flex-col space-y-2">
-              <h3 className="text-xl font-medium text-gray-800/80 dark:text-gray-200">Research papers</h3>
+              <h3 className="text-xl font-medium text-gray-800/80 dark:text-gray-200">Research Papers</h3>
               <div className="block">
-                  <span className="text-sm text-gray-400 dark:text-gray-300">Coming soon...</span>
+                  <span className="text-sm italic text-gray-400 dark:text-gray-500">Coming soon...</span>
             </div>
             </div>
-            {/** featured talks */}
+            {/** Featured talks */}
             <div className="flex flex-col space-y-2">
-              <h3 className="text-xl font-medium text-gray-800/80 dark:text-gray-200">Featured talks</h3>
+              <h3 className="text-xl font-medium text-gray-800/80 dark:text-gray-200">Featured Talks</h3>
               <div className="block">
-                  <span className="text-sm text-gray-400 dark:text-gray-300">Coming soon...</span>
+                  <span className="text-sm text-gray-400 italic dark:text-gray-500">Coming soon...</span>
               </div>
             </div>
           </div>

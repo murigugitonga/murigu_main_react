@@ -17,7 +17,7 @@ export default function PersonalDetail() {
                     <h2 className="text-xl font-medium">Murigu Gitonga</h2>
                     <h3 className="text-[14px] text-gray-500 dark:text-gray-300/70 font-normal">Software Engineer</h3>
                 </div>
-                <div className="grid w-full grid-cols-2 gap-5 text-sm md:grid-cols-1 lg:grid-cols-2 place-items-center">
+                <div className="hidden w-full grid-cols-2 gap-5 text-sm md:grid-cols-1 lg:grid-cols-2 place-items-center">
                     {/* <SkillMarquee/> */}
                     {/* <Skillset/> */}
                     <span className="bg-gray-900/85 py-0.5 px-2 text-gray-300 md:text-center whitespace-nowrap">Artificial Intelligence</span> 
