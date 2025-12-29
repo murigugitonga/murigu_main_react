@@ -17,9 +17,9 @@ export default function App() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
-        duration: 0.8,
+        duration: 1.5,
         ease: "easeOut",
-        delay: 0.2,
+        delay: 0.3,
       }}
       className="bg-neutral-50 flex"
     >
