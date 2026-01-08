@@ -10,7 +10,7 @@ export default function Home() {
     <PageWrapper>
       <div className="flex flex-col w-full space-y-10">
             <div className="relative flex items-center justify-center h-24 flex-col bg-inherit">
-                <span className="text-3xl font-bold tracking-wide text-center text-gray-800 leading-snug bg-inherit dark:text-gray-50">Developing Next-Generation Capabilities for Next Generation Problems</span>
+                <span className="text-2xl md:text-3xl font-bold tracking-wide text-center text-gray-800 leading-snug bg-inherit dark:text-gray-50">Developing Next-Generation Capabilities for Next Generation Problems</span>
                 {/* <Carousel/> */}
             </div>
              <hr className="mx-6 font-thin text-gray-700/40 dark:text-gray-500"/>

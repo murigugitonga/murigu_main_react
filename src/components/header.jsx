@@ -8,7 +8,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 500); // threshold for triggering compact header
+      setScrolled(window.scrollY > 300); // threshold for triggering compact header
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
