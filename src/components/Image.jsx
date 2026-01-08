@@ -27,7 +27,7 @@ export default function PersonalDetail() {
                 <div className="flex flex-col space-y-2.5 justify-center px-4 italic text-gray-500 dark:text-gray-300/80 max-w-prose leading-relaxed md:px-0">
                     <p className="text-[13px] text-center">I am a computer scientist and a software & systems engineer working at the intersection of applied research and systems engineering to solve complex, high-impact problems across diverse domains.</p>
                     <p className="text-[13px] text-center">I am especially interested in systems that integrate artificial intelligence and other emerging technologies to enhance efficiency and capability.</p>
-                    <p className="text-[13px] text-center">If you are here, you are home already.</p>
+                    <p className="text-[13px] text-center">Welcome to my digital abode.</p>
                 </div>
             </div>
         </div>
