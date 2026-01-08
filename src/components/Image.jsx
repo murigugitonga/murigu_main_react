@@ -10,7 +10,7 @@ export default function PersonalDetail() {
                 {!loaded && (
                     <div className="absolute inset-0 rounded-lg bg-gray-300 animate-pulse"/>
                 )}
-                <img src={murigu} loading="lazy" onLoad={()=>setLoaded(true)} className={`object-cover ${loaded ? "opacity-100":"opacity-0"} transition-opacity duration-300  w-4/5 h-full rounded-lg md:w-full ring-2 ring-offset-4 ring-blue-600 lg:w-1/2 aspect-auto`} alt="Murigu"/>
+                <img src={murigu} loading="lazy" onLoad={()=>setLoaded(true)} className={`object-cover ${loaded ? "opacity-100":"opacity-0"} transition-opacity duration-50 ease-in w-4/5 h-full rounded-lg md:w-full ring-2 ring-offset-4 ring-blue-600 lg:w-1/2 aspect-auto`} alt="Murigu"/>
             </div>
             <div className="flex flex-col items-center w-full space-y-4">
                 <div className="flex flex-col items-center space-y-0">
