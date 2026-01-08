@@ -83,7 +83,7 @@ export default function Projects() {
 
           <div className="mt-3 w-full text-sm flex items-center justify-between gap-4">
             {r.primaryLanguage && (
-              <span className="flex w-full whitespace-nowrap items-center gap-1">
+              <span className="flex space-x-0.5 w-full whitespace-nowrap items-center gap-1">
                 <span
                   className="w-3 h-3 rounded-full"
                   style={{ backgroundColor: r.primaryLanguage.color || "#000" }}
@@ -92,9 +92,9 @@ export default function Projects() {
               </span>
             )}
             {/** relative time since project was last uploaded */}
-            <p className="flex items-center w-full whitespace-nowrap space-x-1">
+            <p className="flex items-center w-full whitespace-nowrap space-x-1.5">
               <Clock className="text-gray-500 w-4 h-4"/>
-              <span className="text-gray-400 text-[12px] whitespace-nowrap">{timeAgo(r.updatedAt)}</span>
+              <span className="text-gray-400 text-[10px] whitespace-nowrap">{timeAgo(r.updatedAt)}</span>
             </p>
           </div>
         </div>
