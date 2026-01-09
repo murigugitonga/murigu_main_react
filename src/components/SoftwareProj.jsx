@@ -21,6 +21,7 @@ export default function Projects() {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Pinned repos
   const API_URL = "https://murigu-main-react.vercel.app/api/pinned";
 
   useEffect(() => {

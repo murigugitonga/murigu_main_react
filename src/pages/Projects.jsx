@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import Projects from "../components/SoftwareProj";
-
+import SoftwareProjects from "../components/projects/SoftwareProj2";
 export default function Contact() {
   return (
     <PageWrapper>
@@ -12,7 +12,8 @@ export default function Contact() {
             {/**software Engineering */}
             <div className="flex flex-col space-y-2">
                 <h3 className="text-xl font-medium text-gray-800/80 dark:text-gray-200">Software</h3>
-                <Projects/>
+                {/* <Projects/> */}
+                <SoftwareProjects/>
             </div>
             {/** Selected Blogs */}
             {/* <div className="flex flex-col space-y-2">
