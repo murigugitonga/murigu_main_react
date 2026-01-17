@@ -51,7 +51,7 @@ export default function About() {
               the effort to further advance AI capabilities, it is clear that we are only at the dawn of this revolution.
             </p>
             <p>
-              That also serves as a sufficient indicator that these models will only get better and more powerful. I thinking of them as precursors to the much-hyped AGI. Some(rightfully) consider them to be early forms of AGI. Most industries
+              That also serves as a sufficient indicator that these models will only get better and more powerful. I like thinking of them as precursors to the much-hyped AGI. Some(rightfully) consider them to be early forms of AGI. Most industries
               are at the infancy stages of adopting AI technologies, and I believe that the next decade will witness a radical shift in how
               businesses operate, with AI playing a central role in driving innovation and efficiency.
             </p>
