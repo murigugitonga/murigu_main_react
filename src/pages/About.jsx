@@ -10,7 +10,7 @@ export default function About() {
           <AboutSection title="Why this?">
             <p>
               I first got into software engineering because I wanted to create products
-              that would not only solve problems but also demonstrate how powerful and effective
+              that would not only solve problems in the digital space but also demonstrate how powerful and effective
               technology could be as a tool.
             </p>
             <p>
@@ -36,7 +36,7 @@ export default function About() {
           <AboutSection title="A spotlight on current trends.">
             <p>
               Advancements in the field of artificial intelligence have in the recent past, triggered a lot of debates, key among them being the possibility
-              of AI taking over workplaces as it advances. Experts have aptly christened this as the <strong>AI revolution</strong>. There is palpable, unspoken fear in this. AI is here to re-define our way of life and in its wake, is heavily reshaping the global industrial complex.
+              of AI taking over workplaces as it advances. Experts have aptly christened this as the <strong className="font-medium text-gray-700 dark:text-gray-200"> {" "}AI revolution {" "}</strong>. There is palpable, unspoken fear in this. AI is here to re-define our way of life and in its wake, is heavily reshaping the global industrial complex.
             </p>
             <p>
               The harsh truth is that the revolution will entirely re-define some traditional roles and quite inevitably, eradicate some. However, an important point lies in the fact that
@@ -46,18 +46,21 @@ export default function About() {
           <hr className="font-thin text-gray-700/40 dark:text-gray-500 mx-6"/>
           <AboutSection title="A brief glimpse into the future.">
             <p>
-              The last three years have seen rapid advancements in artificial intelligence, notably in the field of machine learning and deep learning. Ubiquitous large language models such as OpenAI's GPT-5 and Google's Gemini
+              The last three years have seen rapid advancements in artificial intelligence, notably in the field of machine learning and deep learning. Ubiquitous large language models such as OpenAI's GPT-5 and Google's Gemini 3
               have recently crossed a threshold that surpasses an average human's reasoning and now form the backbone of a fast evolving technological world order. Going by the amount of effort and investment major tech companies are pouring into 
               the effort to further advance AI capabilities, it is clear that we are only at the dawn of this revolution.
             </p>
             <p>
-              That also serves as a sufficient indicator that these models will only get better and more powerful. I like thinking of them as precursors to the much-hyped AGI. Some(rightfully) consider them to be early forms of AGI. Most industries
+              That also serves as a sufficient indicator that these models will only get better and more powerful. I like thinking of them as precursors to the much-hyped AGI. Some (rightfully) consider them to be early forms of AGI. Currently, most industries
               are at the infancy stages of adopting AI technologies, and I believe that the next decade will witness a radical shift in how
               businesses operate, with AI playing a central role in driving innovation and efficiency.
             </p>
             <p>
-              Industries and organisations will all need to adapt in a way that allows seemless integration of AI technologies into their existing workflows and systems.
-              The future belongs to those who are willing to adapt. Now is the time to lay a solid foundation.
+              Industries and organisations will all need to adapt in a way that allows seamless integration of AI technologies into their existing workflows and systems.
+              The future belongs to those who are willing to adapt.
+            </p>
+            <p>
+               Now is the time to lay a solid foundation.
             </p>
           </AboutSection>
         </div>
