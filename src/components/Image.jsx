@@ -5,7 +5,7 @@ export default function PersonalDetail() {
     const [loaded, setLoaded] = useState(false)
     return (
         <div className="flex flex-col w-full space-y-4 md:space-y-4 md:w-1/4">
-            <div className="relative flex items-center justify-center w-full overflow-hidden rounded-lg">
+            <div className="relative flex items-center justify-center w-full rounded-lg">
                 {/* Skeleton Loader */}
                 {!loaded && (
                     <div className={`
