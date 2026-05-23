@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
-  // smaller pb on links so the active border can align with nav border
+  // smaller pb on links: active border aligns perfectly with bottom border
   const linkBase = "px-4 pb-2 rounded-none transition-all duration-200 ease-in-out";
 
   // active: explicit blue text + 4px thick underline + slight negative bottom margin
@@ -9,7 +9,7 @@ export default function NavBar() {
   const active = "text-blue-600 dark:text-blue-500 font-semibold border-b-2 border-blue-600 dark:border-blue-500 mb-0";
 
   return (
-    // nav has its own base border; reduce nav bottom padding so alignment looks flush
+    // nav has its own base border -> reduce nav bottom padding so alignment looks flush
     <nav className="flex gap-8 p-4 pb-0 border-b border-gray-200 dark:border-gray-500 bg-inherit">
       <NavLink
         replace
@@ -23,6 +23,7 @@ export default function NavBar() {
       </NavLink>
 
       <NavLink 
+        replace
         to="/about"
         end
         className={({ isActive }) =>
@@ -33,6 +34,7 @@ export default function NavBar() {
       </NavLink>
 
       <NavLink
+        replace
         to="/projects"
         end
         className={({ isActive }) =>

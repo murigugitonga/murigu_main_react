@@ -31,7 +31,6 @@ export default function App() {
 
           <div className="flex flex-col -space-y-2 xl:max-w-3xl md:w-3/4">
             <Navbar />
-
             <AnimatePresence mode="wait">
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />

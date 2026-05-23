@@ -10,8 +10,8 @@ export default function About() {
           <AboutSection title="Why this?">
             <p>
               I first got into software engineering because I wanted to create products
-              that would not only solve problems in the digital space but also demonstrate how powerful and effective
-              technology could be as a tool.
+              that would not only solve problems in the digital space, but also demonstrate how powerful and effective
+              technology (and especially software) could be as a tool.
             </p>
             <p>
               While studying software engineering, my eyes were opened to the wider
